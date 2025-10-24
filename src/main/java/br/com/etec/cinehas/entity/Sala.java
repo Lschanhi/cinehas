@@ -1,7 +1,11 @@
 package br.com.etec.cinehas.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "TBL_SALA")// será preciso colocar o @table caso o nome da classe seja defirente da Tabela no Banco de Dados
 public class Sala

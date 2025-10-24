@@ -38,6 +38,4 @@ public class Filme
     private String descricao;
     @Column(name = "NR_AVALIACAO")
     private double avaliacao;
-    @Column(name = "NR_PRECO")
-    private double preco;
 }

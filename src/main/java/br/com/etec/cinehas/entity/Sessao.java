@@ -1,10 +1,14 @@
 package br.com.etec.cinehas.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
-
+@Getter
+@Setter
+@Entity(name= "TBL_SESSAO")
 public class Sessao
 {
     @Id//Este campo é a chave primaria na tabela
@@ -20,7 +24,7 @@ public class Sessao
     @OneToOne
     @JoinColumn(name = "ID_SALA")
     private Sala sala;
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "ID_FILME")
     private Filme filme;
 }

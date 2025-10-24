@@ -2,7 +2,11 @@ package br.com.etec.cinehas.entity;
 
 import br.com.etec.cinehas.enuns.StatusPagamentoenum;
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 @Entity
 @Table(name= "TBL_PAGAMENTO")
 public class Pagamento

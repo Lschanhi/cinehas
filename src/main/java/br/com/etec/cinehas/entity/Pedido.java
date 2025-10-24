@@ -2,8 +2,13 @@ package br.com.etec.cinehas.entity;
 
 import br.com.etec.cinehas.enuns.StatusPedidoEnum;
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.List;
+@Getter
+@Setter
 @Entity
 @Table(name = "TBL_PEDIDO")
 public class Pedido
@@ -21,6 +26,6 @@ public class Pedido
     @JoinTable(name = "TBL_REL_PEDIDO_INGRESSO",
             joinColumns = @JoinColumn(name = "ID_INGRESSO"),
             inverseJoinColumns = @JoinColumn(name = "ID_PEDIDO"))
-    private Ingresso ingresso;
+    private List<Ingresso> ingresso;
 
 }
